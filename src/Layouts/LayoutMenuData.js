@@ -159,6 +159,12 @@ const Navdata = () => {
           link: "/list-article",
           parentId: "article",
         },
+        {
+          id: "list-article-2",
+          label: "Danh sách bài viết 2",
+          link: "/list-article-2",
+          parentId: "article2",
+        },
       ],
     },
     {
@@ -277,7 +283,7 @@ const Navdata = () => {
     },
     {
       id: "article-price",
-      label: "Nhận bút",
+      label: "Nhuận bút",
       icon: "mdi mdi-piggy-bank-outline",
       link: "/article-price",
     },

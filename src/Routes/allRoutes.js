@@ -240,6 +240,7 @@ import FileManager from "../pages/FileManager";
 import ToDoList from "../pages/ToDo";
 import Account from "../pages/TSHT/Account/Account";
 import Article from "../pages/TSHT/Article/Article";
+import Article2 from "../pages/TSHT/Article/Article2";
 import ArticlePrice from "../pages/TSHT/ArticlePrice/ArticlePrice";
 import Authentication from "../pages/TSHT/Authenthication/Authentication";
 import Category from "../pages/TSHT/Category/Category";
@@ -499,6 +500,7 @@ const authProtectedRoutes = [
   { path: "/update-account/:id", component: <UpdateAccount /> },
   { path: "/add-account", component: <CreateAccount /> },
   { path: "/list-article", component: <Article /> },
+  { path: "/list-article-2", component: <Article2 /> },
   { path: "/article-price", component: <ArticlePrice /> },
   { path: "/authentication", component: <Authentication /> },
 

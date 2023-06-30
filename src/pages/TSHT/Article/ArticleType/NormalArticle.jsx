@@ -200,13 +200,13 @@ const NormalArticle = ({ article_type }) => {
                     onBlur={validation.handleBlur}
                     invalid={
                       validation.touched.article_title &&
-                      validation.errors.article_title
+                        validation.errors.article_title
                         ? true
                         : false
                     }
                   />
                   {validation.touched.article_title &&
-                  validation.errors.article_title ? (
+                    validation.errors.article_title ? (
                     <FormFeedback type="invalid">
                       {validation.errors.article_title}
                     </FormFeedback>
@@ -229,13 +229,13 @@ const NormalArticle = ({ article_type }) => {
                     onBlur={validation.handleBlur}
                     invalid={
                       validation.touched.article_sapo &&
-                      validation.errors.article_sapo
+                        validation.errors.article_sapo
                         ? true
                         : false
                     }
                   />
                   {validation.touched.article_sapo &&
-                  validation.errors.article_sapo ? (
+                    validation.errors.article_sapo ? (
                     <FormFeedback type="invalid">
                       {validation.errors.article_sapo}
                     </FormFeedback>
@@ -372,8 +372,8 @@ const NormalArticle = ({ article_type }) => {
                     // treeData={optionsAuthor}
                     treeDefaultExpandAll
                     placeholder="Tin liên quan"
-                    // value={valueAuthor}
-                    // onChange={onChangeAuthor}
+                  // value={valueAuthor}
+                  // onChange={onChangeAuthor}
                   />
                 </div>
               </Form>

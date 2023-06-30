@@ -299,3 +299,4 @@ export const ARTICLE_UPDATE_ORDER_POSITON =
   "/cms/article-update-order-position";
 export const POST_ARTICLE = `/cms/article-insert`;
 export const DEL_ARTICLE = `/cms/article-delete`;
+export const STATISTICAL_ARTICLE_PRICE_GET_LIST = `/cms/statistical-article-price-get-list`;

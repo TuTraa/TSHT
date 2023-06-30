@@ -74,6 +74,7 @@ const Article = () => {
     setValueCategory(newValue);
     setReload(!reload);
   };
+
   const onChangeAuthor = (newValue) => {
     if (newValue === undefined) {
       newValue = null;
@@ -85,6 +86,7 @@ const Article = () => {
     setValueAuthor(newValue);
     setReload(!reload);
   };
+
   const onChangeFromDate = (dates, dateStrings) => {
     setPaginationFilter({
       ...paginationFilter,
@@ -182,6 +184,8 @@ const Article = () => {
     ).then((res) => {
       if (res.data && res.data.list && res.status > 0) {
         setArticleList(res.data.list);
+        console.log('10')
+
         setPaginationFilter({ ...paginationFilter, total: res.data.total });
       } else {
         toast.error("Không tìm thấy dữ liệu!", {
@@ -202,7 +206,6 @@ const Article = () => {
   const pArticle = {
     marginBottom: 5,
   };
-
   const btnNew = {
     background: "#FFD88C",
     color: "#F47113",
@@ -236,8 +239,8 @@ const Article = () => {
               {record.created_date === null
                 ? ""
                 : `| ${moment(new Date(record.created_date)).format(
-                    "DD/MM/YYYY HH:mm:ss"
-                  )}`}
+                  "DD/MM/YYYY HH:mm:ss"
+                )}`}
             </SpanArticle>
           </div>
         ),
@@ -281,11 +284,11 @@ const Article = () => {
           <div className="d-flex flex-column" style={{ marginBottom: 10 }}>
             <StatusBtn
               style={
-                (record.article_status_id == 1 && btnNew) ||
-                (record.article_status_id == 2 && btnPending) ||
-                (record.article_status_id == 3 && btnIsWaitApproved) ||
-                (record.article_status_id == 4 && btnPublished) ||
-                (record.article_status_id == 5 && btnDelete)
+                (record.article_status_id === 1 && btnNew) ||
+                (record.article_status_id === 2 && btnPending) ||
+                (record.article_status_id === 3 && btnIsWaitApproved) ||
+                (record.article_status_id === 4 && btnPublished) ||
+                (record.article_status_id === 5 && btnDelete)
               }
             >
               {record.status}
@@ -294,8 +297,8 @@ const Article = () => {
               {record.modified_date === null
                 ? ""
                 : moment(new Date(record.modified_date)).format(
-                    "DD/MM/YYYY HH:mm:s"
-                  )}
+                  "DD/MM/YYYY HH:mm:s"
+                )}
             </SpanArticle>
           </div>
         ),

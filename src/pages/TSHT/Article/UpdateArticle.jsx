@@ -10,7 +10,7 @@ const AddArticle = () => {
   return (
     <>
       <div className="page-content">
-        <Container fluid={true}>
+        <Container fluid={false}>
           <BreadCrumb
             title="Thông tin bài viết"
             pageTitle="Danh sách bài viết"

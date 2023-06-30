@@ -533,6 +533,24 @@ export const getAPIListArticle = (
     _todate,
     _fromdate,
   });
+export const statisticalArticlePriceGetList = (
+  author_id,
+  category_id,
+  article_type_id,
+  fromdate,
+  todate,
+  offset,
+  limit
+) =>
+  api.get(url.STATISTICAL_ARTICLE_PRICE_GET_LIST, {
+    author_id,
+    category_id,
+    article_type_id,
+    fromdate,
+    todate,
+    offset,
+    limit
+  });
 export const getAPIListAuthor = () => api.get(url.GET_LIST_AUTHOR);
 export const getAPIPostArticle = (article) =>
   api.create(url.POST_ARTICLE, article);
